@@ -40,6 +40,7 @@ class Server:
         assert isinstance(page, int)
         assert isinstance(page_size, int)
         assert page > 0
+        assert page_size > 0
         start_index, end_index = index_range(page, page_size)
         # self.__dataset = self.dataset()
         self.dataset()

@@ -42,7 +42,7 @@ class Server:
         # *******************use asert instead ***************************
         """if index < 0 or index > len(self.__dataset):
             raise AssertionError()"""
-        assert (index > 0 and index < len(self.__dataset))
+        assert (index >= 0 and index < len(self.__dataset))
         index_val = index
         data = []
         offset = 0
