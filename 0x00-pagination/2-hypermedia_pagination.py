@@ -33,10 +33,13 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         # ************************use asser instead**************************
-        if not isinstance(page, int) or not isinstance(page_size, int):
+        """if not isinstance(page, int) or not isinstance(page_size, int):
             raise AssertionError()
         if page <= 0 or page_size <= 0:
-            raise AssertionError()
+            raise AssertionError()"""
+        assert isinstance(page, int)
+        assert isinstance(page_size, int)
+        assert page > 0
         start_index, end_index = index_range(page, page_size)
         # self.__dataset = self.dataset()
         self.dataset()

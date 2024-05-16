@@ -40,8 +40,9 @@ class Server:
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         # *******************use asert instead ***************************
-        if index < 0 or index > len(self.__dataset):
-            raise AssertionError()
+        """if index < 0 or index > len(self.__dataset):
+            raise AssertionError()"""
+        assert (index > 0 and index < len(self.__dataset))
         index_val = index
         data = []
         offset = 0
