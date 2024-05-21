@@ -22,10 +22,11 @@ class LFUCache(base):
             self.tracker[key] = 1
         if len(self.cache_data) > self.MAX_ITEMS:
             # sort tracker using values
-            sorted_tupple = sorted(self.tracker.items())
+            '''sorted_tupple = sorted(self.tracker.items())
             sort_tracker = {}
             for v in sorted_tupple:
-                sort_tracker[v[0]] = v[1]
+                sort_tracker[v[0]] = v[1]'''
+            sort_tracker = sorted(self.tracker.items(), key=lambda x:x[1])
             for _ in range(1):
                 for k, v in sort_tracker.items():
                     '''remove the key with least frequency except inserted key
