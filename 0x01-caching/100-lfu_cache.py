@@ -16,7 +16,7 @@ class LFUCache(base):
             return
         if key in self.cache_data.keys():
             self.cache_data.pop(key)
-            # self.tracker[key] += 1
+            self.tracker[key] += 1
         self.cache_data[key] = item
         if key not in self.tracker.keys():
             self.tracker[key] = 1
