@@ -1,0 +1,42 @@
+# English translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-05-28 16:00+0300\n"
+"PO-Revision-Date: 2024-05-28 13:44+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: 3-app.py:30 4-app.py:33 5-app.py:65 6-app.py:69 7-app.py:88 app.py:91
+msgid "Welcome to Holberton"
+msgstr "Welcome to Holberton"
+
+#: 3-app.py:31 4-app.py:34 5-app.py:66 6-app.py:70 7-app.py:89 app.py:92
+msgid "Hello world!"
+msgstr "Hello world!"
+
+#: 5-app.py:61 6-app.py:65 7-app.py:84 app.py:85
+msgid "You are not logged in"
+msgstr "You are not logged in."
+
+#: 5-app.py:63 6-app.py:67 7-app.py:86 app.py:87
+#, python-format
+msgid "You are logged in as %(username)s"
+msgstr "You are logged in as %(username)s."
+
+#: app.py:90
+#, python-format
+msgid "The current time is %(current_time)s."
+msgstr "The current time is %(current_time)s."
+

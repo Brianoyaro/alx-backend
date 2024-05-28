@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>{{ home_title }}</title>
+	</head>
+	<body>
+		<h1>{{ home_header }}</h1>
+		<p>{{ login_msg }}</p>
+		{% if current_time_is %}
+		<p>{{ current_time_is }}</p>
+		{% endif %}
+	</body>
+</html>
