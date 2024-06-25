@@ -50,6 +50,7 @@ async function getCurrentReservedStockById(itemId) {
 // Poduct detail
 app.get('/list_products/:itemId', (req, resp) => {
   let itemId = req.params.itemId;
+  itemId = Number(itemId);
   let stock = getCurrentReservedStockById(itemId);
   // what if instead of above line I use stock = getItemById(itemId) line 17
   if (Object.keys(stock).length === 0) {
