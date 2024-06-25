@@ -6,7 +6,6 @@ const express = require('express');
 
 //create expressonst kue = require('kue') app
 const app = express()
-app.listen(1245);
 
 //create a kue queue
 const queue = kue.createQueue();
@@ -23,19 +22,23 @@ client.on('error', (err) => {
 function reserveSeat(number) {
     client.set('available_seats', number);
 }
-function getCurrentAvailableSeats() {
-    let seats = get('available_seats');
+async function getCurrentAvailableSeats() {
+    let seats = await get('available_seats');
+    seats = Number(seats);
     return seats;
 }
-// when launching application set number of available to 50
-reserveSeat(50);
+
+let reservationEnabled = true;
 // initialize reservationEnabled to true,
 // it will be turned to false when no seats available
-let reservationEnabled = true;
+app.listen(1245, () => {
+  // when launching application set number of available to 50
+  reserveSeat(50);
+})
 
-app.get('/avaialble_seats', (req, res) => {
+app.get('/available_seats', (req, res) => {
     let seats = getCurrentAvailableSeats();
-    res.json({'numberOfAvailableSeats': seats});
+    res.json(`{numberOfAvailableSeats: ${seats}}`);
 });
 
 app.get('reserve_seat', (req, res) => {
