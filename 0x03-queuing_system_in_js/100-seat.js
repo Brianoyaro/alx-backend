@@ -24,7 +24,9 @@ function reserveSeat(number) {
 }
 async function getCurrentAvailableSeats() {
     let seats = await get('available_seats');
-    seats = Number(seats);
+    // let seats = client.get('available_seats')
+    // seats = Number(seats);
+    console.log(seats);
     return seats;
 }
 
